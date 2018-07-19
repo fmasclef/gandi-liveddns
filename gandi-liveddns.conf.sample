@@ -1,0 +1,10 @@
+#
+# Gandi LiveDDNS sample configuration file
+#
+
+# This is the configuration file for A record pointing to server.sample.net
+
+APIKEY=sLGCNU2Ni2d1lDsR5q74qUZ6    # this is a fake one, get it at gandi.net ;)
+DOMAIN=sample.net                  # a domain you own and which use LiveDNS
+RECORD=server                      # the host you want to keep sync
+TYPE=A                             # record type (should be A)
