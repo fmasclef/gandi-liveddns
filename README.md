@@ -8,7 +8,7 @@ Purpose
 
 So you're hosting a tiny server on a residential network? I imagine your ISP uses DHCP leases. So you need a reliable dynamic DNS. Should you consider routing your own domain name registered at gandi.net, you're at the right place.
 
-This bash script make use of `dig` and the Gandi LiveDNS API to keep your domain routred to your server.
+This bash script make use of `dig` and the Gandi LiveDNS API to keep your domain routed to your server.
 
 Setup
 -----
