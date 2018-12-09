@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # source config file
-source gandi-liveddns.conf
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+source ${DIR}/gandi-liveddns.conf
 # get current wan address
 IPv4=`dig myip.opendns.com A +short @resolver1.opendns.com`
 IPv6=`dig myip.opendns.com AAAA +short @resolver1.opendns.com`
