@@ -14,17 +14,24 @@ Setup
 -----
 
 ```
-mkdir -p /data/git/gandi-liveddns
-git clone https://github.com/fmasclef/gandi-liveddns /data/git/gandi-liveddns
+git clone https://github.com/fmasclef/gandi-liveddns
+./gandi-liveddns/gandi-liveddns.sh
 ```
 
-You're almost done ;)
+You're done ;)
 
-Run `gandi-liveddns-setup.sh` to create a configuration file or just `cp gandi-liveddns.conf.sample gandi-liveddns.conf` and edit the file.
+On first run, the script will create a `.config` file. You'll be prompted for your Gandi LiveDNS API key and a space separated list of FQDNs to update.
 
-You should use `cron` to make sure the script is actualy scheduled. You do **NOT** need root level privileges to run this script. Your cronjobs should look like:
+A cron job will be created to run the script every 5 minutes. You should use `crontab -l` to make sure the script is actualy scheduled. You do **NOT** need root level privileges to run this script.
+
+Reconfigure
+-----------
+
+In the case you need to change something, just run the `--reconfigure` command line parameter:
 
 ```
-@reboot /data/git/gandi-liveddns/gandi-liveddns.sh >>/var/log/gandi-liveddns.log 2>&1
-*/5 * * * *  /data/git/gandi-liveddns/gandi-liveddns.sh >>/var/log/gandi-liveddns.log 2>&1
+./gandi-liveddns.sh --reconfigure
 ```
+
+Enjoy.
+
